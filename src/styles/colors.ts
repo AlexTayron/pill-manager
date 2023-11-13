@@ -3,7 +3,8 @@ export default {
   green_dark: '#2B7A4B',
   green_light: '#DAF2E4',
 
-  heading: '#52665A',
+
+  heading1: '#52665A',
   body_dark: '#738078',
   body_light: '#AAB2AD',
 
@@ -12,8 +13,11 @@ export default {
   white: '#FFFFFF',
   gray: '#CFCFCF',
 
-  blue: '#3D7199',
+  heading: '#3D7199',
   blue_light: '#EBF6FF',
+
+  paragraph: '#a53e76',
+  button: '#b042ff',
 
   red: '#E83F5B',
 };

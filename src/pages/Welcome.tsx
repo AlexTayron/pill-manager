@@ -10,35 +10,35 @@ import {
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
-
-import wateringImg from "../assets/watering.png";
+import managerImg from "../assets/manager.png";
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 import { useNavigation } from "@react-navigation/core";
 
 export function Welcome() {
+  const navigation = useNavigation();
 
-  const navigation = useNavigation()
-
-  function handleStart(){
-    navigation.navigate('UserIdentification' as never)
-
+  function handleStart() {
+    navigation.navigate("UserIdentification" as never);
   }
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.wrapper}>
         <Text style={styles.title}>
-          Gerencie {"\n"} suas plantas de{"\n"} forma fácil
+          Gerencie {"\n"} seus medicamentos {"\n"}de forma fácil
         </Text>
 
-        <Image source={wateringImg} style={styles.image} resizeMode="contain" />
+        <Image source={managerImg} style={styles.image} resizeMode="contain" />
 
         <Text style={styles.subtitle}>
-          Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar você
-          sempre que precisar.
+          Não perca os horários de seus medicamentos
         </Text>
-        <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={handleStart}>
+        <TouchableOpacity
+          style={styles.button}
+          activeOpacity={0.7}
+          onPress={handleStart}
+        >
           <Text style={styles.buttonIcon}>
             <Feather name="chevron-right" style={styles.buttonIcon} />
           </Text>
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: "center",
     paddingHorizontal: 20,
-    color: colors.heading,
+    color: colors.paragraph,
     fontFamily: fonts.text,
   },
   image: {
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: colors.green,
+    backgroundColor: colors.button,
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 16,

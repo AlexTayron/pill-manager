@@ -42,7 +42,7 @@ export function UserIdentification() {
           <TextInput style={[
             styles.input, 
             (isFocused || isFilled) && {
-                borderColor: colors.green
+                borderColor: colors.paragraph
                 }]} 
                 placeholder="Digite seu nome" 
                 onBlur={handleInputBlur} 
